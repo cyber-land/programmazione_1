@@ -1,0 +1,5 @@
+marco 40
+luca 30
+lucia 20
+manuel 25
+giada 20
