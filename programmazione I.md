@@ -4,7 +4,8 @@ argomenti
 - [x] [[strutture dati]]
 	- [x] implementazioni (collegare i file)
 	- [x] bst (min, max, suc, prec, height ) 12.1
-	- [ ] bst insert, delete funs
+	- [ ] bst (bin)search, insert, delete, conta_nodi, height, conta_foglie, lungh_cammino funs
+	- [ ] print tree
 	- [x] btv.melezinez.cz
 	- [ ] red-black trees, b-trees
 - [x] [[algoritmi]]
@@ -13,20 +14,21 @@ argomenti
 	- [ ] string literals
 	- [ ] stampa output fun ricorsiva
 	- [ ] generazione numeri randomici
-	- [ ] list headers
+	- [x] headers
 	- [ ] funzioni per valore, indirizzo, riferimento
+	- [ ] **ambienti di visibilità** keyword: static
 - [ ] [[linguaggio cpp]]
-	- [ ] scrivere le implementazione anche in cpp, specialmente se più facili
-	- [ ] dynamic mamory management
+	- [x] scrivere le implementazione anche in cpp, specialmente se più facili
+	- [x] dynamic mamory management
 	- [ ] std lib
     	- [x] string
     	- [x] file
     	- [x] vector
     	- [x] map
-    	- [ ] iterators, (smart) pointers
+    	- [ ] iterators, (smart) pointers (arithmetic)
     	- [ ] list headers
     - [ ] distructors
-- [x] [[equazioni di ricorrenza]]
+- [ ] [[equazioni di ricorrenza]]
 	- [ ] metodo iterativo
 	- [ ] alberi di ricorsione
 
@@ -38,13 +40,13 @@ alberi binari
 scrivere codice a mano
 
 **domande esame**
-- [ ] quale versione del c usiamo?
+- [x] quale versione del c/c++ usiamo? c++ 99/11
 - [x] computer?
-- [x] so?
+- [x] so? win
 - [x] ambiente sviluppo? compilatore?
-- [x] linguaggio?
-- [x] std lib?
-- [x] appunti personali?
+- [x] linguaggio? c++
+- [x] std lib? y
+- [x] appunti personali? n
 - [ ] metodo consegna?
 - [ ] credenziali?
-- [x] internet?
+- [x] internet? n

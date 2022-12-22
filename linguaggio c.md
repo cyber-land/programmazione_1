@@ -213,14 +213,27 @@ sizeof(str), str, &str, *str );
 printf("ptl: size (%li byte) value (%s) address (%p) that point to (%c) of address (%p) \n\n",
 sizeof(ptl), ptl, &ptl, *ptl, ptl );
 
-char *lit = "abcdef"; // string literal (read only)
+char *lit = "fedcba"; // string literal (read only)
 printf("lit: size (%li byte) value (%s) address (%p) that point to (%c) of address (%p) \n",
 sizeof(lit), lit, &lit, *lit, lit );
+
+/** pointer arithmetic
+quando si somma e sottrea interi ad un puntatore si moltiplica il 
+valore per il numero di byte che occupa il tipo del puntatore */
 printf("pointer arithmetic: address (%p) point to (%c) distance (%ld byte) \n\n",
-(lit+1), *(lit+1), (lit+1)-(lit) );
+(lit+2), *(lit+2), (lit+2)-(lit) );
+// aggiungendo 2 al puntatore di chars si aggiunge (2 * 1 byte)
+```
 
-// pointer arithmetic
+compile to something like
+```
+str: size (7 byte) value (abcdef) address (0x7ffeb6ffe4e1) that point to (a)    
+ptl: size (8 byte) value (abcdef) address (0x7ffeb6ffe4d0) that point to (a) 
+of address (0x7ffeb6ffe4e1)
 
+lit: size (8 byte) value (fedcba) address (0x7ffeb6ffe4d8) that point to (f) 
+of address (0x55df13b3b0a3)
+pointer arithmetic: address (0x55df13b3b0a4) point to (d) distance (2 byte)
 ```
 
 # Structs
@@ -417,7 +430,13 @@ fclose(fp);
 
 # Headers
 
-# Recursion
+```c
+#ifndef TIPO
+#define TIPO
 
-**ambienti di visibilità**
-keyword: static
+// code
+
+#endif
+```
+
+# Recursion

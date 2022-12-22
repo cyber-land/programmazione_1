@@ -19,17 +19,17 @@ la ricerca **binaria** (o dicotomica) viene usata su insiemi ordinati
 richiede accessi casuali quindi è inefficiente su [[strutture dati#linked list]]
 il caso medio ha complessità `log(n)`
 ```c
-int recursive_binary_search ( int array[],
-int start_index, int end_index, int key ) {
-	if (end_index > start_index) return -1;
-	int middle = ( start_index + end_index )/2;
+// recursive_binary_search
+int rbs ( int array[], int start_index, int end_index, int key ) {
+	if (end_index < start_index) return -1; // not found
+	int middle = stary_index + ( end_index - start_index )/2;
 	
 	if (array[middle] == key) // caso base
 		return middle;
 	if (array[middle] > key)
-		return fun(array, start_index, middle-1, key);
+		return rbs(array, start_index, middle-1, key);
 	else
-		return fun(array, middle+1, end_index, key);
+		return rbs(array, middle+1, end_index, key);
 }
 ```
 
@@ -46,23 +46,18 @@ This algorithm has an Θ(n²) because in the worst and best-case-scenario we hav
 ![[selection_sort.gif]]
 
 ```c
-void swap(int *xp, int *yp) {
-	int temp = *xp;
-	*xp = *yp;
-	*yp = temp;
-}
-void selectionSort(int arr[], int n) {
-	// One by one move boundary of unsorted subarray
-	for (int i = 0; i < n-1; i++) {
-		// Find the minimum element in unsorted array
-		int min_idx = i;
-		for (j = i+1; j < n; j++)
-			if (arr[j] < arr[min_idx])
-				min_idx = j;
-// Swap the found minimum element with the first element
-		if (min_idx != i)
-			swap(&arr[min_idx], &arr[i]);
-    }
+void selection_sort(int a[], int size) {
+  for (int i=0; i<size; i++) {
+    int min_i = i+1;
+    // Find the minimum element ( a[min_i] ) in the subarray [i, size)
+    for (int j=i; j<size; j++) {
+      if ( a[j] < a[min_i] ) min_i = j;
+    }
+    // swap it with a[i]
+    int temp = a[min_i];
+    a[min_i] = a[i];
+    a[i] = temp;
+  }
 }
 ```
 

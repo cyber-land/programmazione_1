@@ -1,4 +1,7 @@
+11.1 11.3
 E21 (14.1 + alcune slide)
+
+# Definizione
 
 come analizzare un algoritmo:
 correttezza
@@ -16,7 +19,7 @@ Complessità: "Dimensione dell’input" → "Tempo"
 |-|-|-|-|-|-|
 |1|1|1|1|1|costante|
 |log n|3|6|9|13|logaritmico|
-|√n|3|10|31|100|sublineare|
+|√n|3|10|31|10^2|sublineare|
 |n|10|10^2|10^3|10^4|lineare|
 |n log n|30|664|~10^4|~10^5|loglineare|
 |n^2|10^2|10^4|10^6|10^8|quadratico|
@@ -25,46 +28,57 @@ Complessità: "Dimensione dell’input" → "Tempo"
 |n!|10!|(10^2)!|(10^3)!|(10^4)!|fattoriale|
 |n^n|10^10|||||
 
-**notazione asintotica**
+**manca il materiale:**
+- alberi di ricorsione
+- divide et impera
+- la complessità di algoritmi in-place è Ω^2
+
+# Notazione asintotica
 
 O: O-grande
-limite superiore asintotico
-Per tutti gli input, l’algoritmo costa al più f (n)
-f (n) = Ω(g(n))
-f (n) è “Omega grande” di g(n)
+limite superiore asintotico - caso pessimo
+Per tutti gli input, l’algoritmo costa al più f(n)
+```
+f(n) = O( g(n) ) => Ǝ c costante t.c. 
+
+f(n) < c*g(n)
+
 f (n) cresce al più come g(n)
+```
 
 Ω: omega-grande
-limite asintotico inferiore
-Per tutti gli input, l’algoritmo costa almeno f (n)
+limite asintotico inferiore - caso ottimo
+Per tutti gli input, l’algoritmo costa almeno f(n)
+```
+f(n) = Ω( g(n) ) => Ǝ c costante t.c. 
+
+f(n) > c*g(n)
+
 f (n) cresce almeno quanto g(n)
+```
 
 Θ: theta
-L’algoritmo richiede Θ(f (n)) per tutti gli input
-f (n) cresce esattamente come g(n)
-f (n) = Θ(g(n)) se e solo se f (n) = O(g(n)) e f (n) = Ω(g(n))
-
-**tipologia di analisi**
-
-caso pessimo
-Il tempo di esecuzione nel caso peggiore è un limite superiore al tempo di esecuzione per qualsiasi input
-
 caso medio
-Distribuzione uniforme
+per tutti gli input, l’algoritmo costa f(n)
+```
+f(n) = Θ( g(n) ) => Ǝ c1, c2 costanti t.c.
 
-caso ottimo
-Può avere senso se si hanno informazioni particolari sull’input
+c1*g(n) < f(n) < c2*g(n)
 
----
+f (n) cresce esattamente come g(n)
+```
 
-stima del tempo di esecuzione per algoritmi:
 
-**iterativi**
-operazioni semplici: T(n) = O(1)
-loops: T(n) = o(cicli * O(corpo))
-if-else: O( max( O(sx), O(dx) ) )
+# Algoritmi iterativi
 
-**ricorsivi**
+|operazione|complexity|
+|-|-|
+|singolo|T(n) = O(1)|
+|loops|T(n) = O( cicli * O(corpo) )|
+|if-else|O( max( O(sx), O(dx) ) )|
+
+# Algoritmi ricorsivi
+
 espresso mediante un equazione di ricorrenza
 Sono necessarie tecniche specifiche per risolvere le equazioni di ricorrenza:
 
@@ -81,16 +95,9 @@ n = 2^i, ovvero quando i = log(n), quindi
 T(n) = c + log(n)c
 E quindi possiamo dire che T(n) = O(log(n))
 
+**alberi di ricorsione**
+
 **metodo di sostituzione**
 - Si ipotizza una possibile soluzione.
 - Si sostituisce l’ipotetica soluzione nei casi base e induttivo.
 - Si dimostra la correttezza della ipotesi tramite induzione matematica.
-
----
-
-**manca il materiale:**
-- alberi di ricorsione
-- divide et impera
-- peggiore, medio, migliore
-- o-grande, omega Ω (limite inferiore), tetha θ (limite sia sup che inf)
-- la complessità di algoritmi in-place è Ω^2

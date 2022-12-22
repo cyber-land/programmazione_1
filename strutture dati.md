@@ -54,15 +54,15 @@ cammino dell'albero = 0 + 1*2 + 2*4 + 3*1 = 13
 **visita in profondità** (Depth-First Search (DFS))
 varianti: pre/in/post order
 richiede uno stack
-```c
+```cpp
 dfs( Tree t ) {
-if t != null {
-	print t // pre-order
-	dft( t->left )
-	print t // in-order
-	dft( t.right() )
-	print t // post-order
-} }
+    if ( t == null ) return;
+	print( t ) // pre-order
+	dfs( t->left )
+	print( t ) // in-order
+	dfs( t->right() )
+	print( t ) // post-order
+}
 ```
 
 **visita in ampiezza** (level) (Breadth First Search (BFS))
@@ -122,6 +122,7 @@ typedef struct Node {
 	Node * next;
 	Node * prev; // for doubly linked list
 } Node;
+// for doubly linked list
 typedef struct List {
   Node* head;
   Node* tail;

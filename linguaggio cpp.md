@@ -1,5 +1,3 @@
-non vengono riprese le funzionalità uguali al [[linguaggio c]]
-
 # Referencing and dereferencing operators
 
 **Referencing** means taking the address of an existing variable (using &) to set a pointer variable. In order to be valid, a pointer has to be set to the address of a variable of the same type as the pointer, without the asterisk:
@@ -76,8 +74,6 @@ si noti che `b` ed `e` sono vicini in memoria mentre l'indirizzo nello heap è m
 see local files
 
 ## Files
-
-needs the library `fstream`
 
 ```cpp
 #include <fstream>
