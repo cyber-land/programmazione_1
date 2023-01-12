@@ -7,8 +7,9 @@ nel secondo caso bisogna chiarire se si vuole recuperare il primo elemento (che 
 
 la ricerca **sequenziale** si usa nel caso di insiemi non ordinati
 nel caso si voglia recuperare un singolo elemento allora il caso medio è `n/2` mentre se si vogliono recuperare tutte le occorrenze allora `O(n)`
+
 ```c
-int sequential_search(array, size, key) { // pseudocode
+int sequential_search( int array[], int size, int key) {
 	for (int i=0; i<size; i++)
 		if (array[i] == key) return i;
 	return -1; // no match
@@ -17,7 +18,8 @@ int sequential_search(array, size, key) { // pseudocode
 
 la ricerca **binaria** (o dicotomica) viene usata su insiemi ordinati
 richiede accessi casuali quindi è inefficiente su [[strutture dati#linked list]]
-il caso medio ha complessità `log(n)`
+il caso medio ha complessità `log(n)
+`
 ```c
 // recursive_binary_search
 int rbs ( int array[], int start_index, int end_index, int key ) {

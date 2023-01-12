@@ -27,14 +27,13 @@ int main () {
 
   /* index-based access */ {
   vector<int> v{ 1, 2, 3 };
-  // Because the at() method performs bounds checking and can throw exceptions, it is slower than []
+  // the at() method is slower than [] because it performs bounds checking and can throw exceptions
   int a = v[1]; // a is 2
   v.at(2) = 5;  // v now contains { 1, 3, 5 }
   // Note: It is undefined behavior to invoke front() or back() on an empty vector
   int b = v.front();
   v.back() = 7;
   }
-
 
   /* deleting */ {
   vector<int> v{ 1, 2, 3, 4, 5, 6 };

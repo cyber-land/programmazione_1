@@ -15,7 +15,7 @@ bool equals ( Data a, Data b ) {
   return ( a.name == b.name && a.surname == b.surname && a.age == b.age );
 }
 
-Node::Node ( Data _data, Node * _next ) { 
+Node::Node ( Data _data, Node * _next ) {
   data = _data, next = _next;
 }
 string Node::print () {
@@ -23,7 +23,7 @@ string Node::print () {
   Node* node = this;
   if (node == NULL) return result;
   while (node != NULL) {
-    result += node->data.print()+"\n"; 
+    result += node->data.print()+"\n";
     node = node->next;
   }
   result.pop_back();
@@ -34,10 +34,9 @@ Node* push (Node* node, Data data) {
 }
 Node* pop (Node* node) {
 	if ( node == NULL) return node;
-	Node* temp = node;
-	node = node->next;
-	delete temp;
-	return node;
+	Node* next = node->next;
+	delete node;
+	return next;
 }
 Data pop (Node &node) {
   assert(&node != NULL);

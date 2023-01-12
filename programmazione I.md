@@ -13,9 +13,9 @@ argomenti
 	- [ ] I/O file binari 8.2 44
 	- [ ] string literals
 	- [ ] stampa output fun ricorsiva
-	- [ ] generazione numeri randomici
+	- [x] generazione numeri randomici
 	- [x] headers
-	- [ ] funzioni per valore, indirizzo, riferimento
+	- [x] funzioni per valore, indirizzo, riferimento
 	- [ ] **ambienti di visibilità** keyword: static
 - [ ] [[linguaggio cpp]]
 	- [x] scrivere le implementazione anche in cpp, specialmente se più facili

@@ -12,7 +12,7 @@ int main() {
   char const *lit = "fedcba"; // string literal (read only)
   printf("lit: size (%li byte) value (%s) address (%p) that point to (%c) of address (%p) \n",
   sizeof(lit), lit, &lit, *lit, lit );
-
+  
   /* pointer arithmetic
 	quando si somma e sottrae interi ad un puntatore si moltiplica il valore per
 	il numero di byte che occupa il tipo del puntatore */

@@ -157,10 +157,9 @@ Data read (Node* node) {
 // elimina il primo elemento e ritorna il riferimento al nuovo primo elemento
 Node* pop (Node* node) {
 	if ( node == NULL) return node;
-	Node* temp = node;
-	node = node->next;
-	delete temp;
-	return node;
+	Node* next = node->next;
+	delete node;
+	return next;
 }
 ```
 

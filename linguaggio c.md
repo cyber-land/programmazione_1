@@ -191,7 +191,7 @@ printf("%s\n", mystring); //bar
 **Iterating Over the Characters in a String**
 
 ```c
-char * string = "hello world"; /* This 11 chars long, excluding the 0-terminator. */
+char * string = "hello world"; // This 11 chars long, excluding the 0-terminator
 size_t length = strlen(string);
 int i = 0;
 for (; i < length; i++) {
@@ -267,7 +267,7 @@ However, if you have a pointer to a struct, this will not work. You have to use 
 & è l’operatore unario di referenziazione. La sua operazione complementare è la
 dereferenziazione o indirezione, effettuabile con l’operatore unario *
 
-Gli operatori binari `.` e `->` svolgono la stessa funzione di `&` e `**` quando l’operando sinistro è
+Gli operatori binari `.` e `->` svolgono la stessa funzione di `&` e `*` quando l’operando sinistro è
 una struttura (o simile) e servono ad accedere all'operando destro che deve essere un
 membro dell'operando sinistro.
 La scrittura `->` vuol dire dereferenziazione e accesso al campo
@@ -291,15 +291,10 @@ le variabili sono composte da:
 - nome (identificativo)
 - tipo 
 - locazione di memoria (left value) (memory address) 
-
 **L-value:** refers to memory location which identifies an object.
-
 A modifiable l-value cannot have an array type, an incomplete type, or a type with the **const** attribute.
-
 -   valore (right value) (memory value)
-
 r-value refers to data value that is stored at some address in memory.
-
 `type variableName = value;`
 
 dereferencing pointer means change what the pointer point to
@@ -431,8 +426,8 @@ fclose(fp);
 # Headers
 
 ```c
-#ifndef TIPO
-#define TIPO
+#ifndef NAME
+#define NAME
 
 // code
 
